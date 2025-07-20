@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Joke Generator 😂</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    h1 {
+      color: #ff6347;
+    }
+    #joke {
+      margin-top: 30px;
+      font-size: 1.5em;
+      min-height: 80px;
+    }
+    button {
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e5533d;
+    }
+  </style>
+</head>
+<body>
+  <h1>😂 Joke Generator</h1>
+  <p>Click the button to get a new joke!</p>
+  <button onclick="generateJoke()">Tell me a joke</button>
+  <div id="joke"></div>
+
+  <script>
+    const goodJokes = [
+      "Why don’t scientists trust atoms? Because they make up everything!",
+      "I told my computer I needed a break, and now it won’t stop sending me Kit-Kats.",
+      "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "I would tell you a joke about construction, but I’m still working on it.",
+      "Why don’t skeletons fight each other? They don’t have the guts.",
+      "What do you call fake spaghetti? An impasta!",
+      "I’m reading a book about anti-gravity. It’s impossible to put down!",
+      "Why did the bicycle fall over? Because it was two-tired!",
+      "Did you hear about the mathematician who’s afraid of negative numbers? He’ll stop at nothing to avoid them.",
+      "What do you call cheese that isn’t yours? Nacho cheese!"
+    ];
+
+    function generateJoke() {
+      const randomIndex = Math.floor(Math.random() * goodJokes.length);
+      document.getElementById('joke').innerText = goodJokes[randomIndex];
+    }
+  </script>
+</body>
+</html>
