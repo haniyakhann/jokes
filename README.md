@@ -1,4 +1,3 @@
-# jokes
 # Joke Generator Web App
 
 A simple, fun web app that shows a random joke every time you click the button. Built with basic HTML, CSS, and JavaScript — perfect for beginners!
